@@ -1,159 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20221229 18:26:36.651" rpa="false" schemaversion="3">
-<suite id="s1" name="Frames" source="F:\Tushar\programming\python only\PythonCode\robot_framework\TestCases\Frames.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20230225 17:56:27.312" rpa="false" schemaversion="3">
+<suite id="s1" name="Frames" source="F:\Tushar\programming\python only\Robot_Framework\robot_framework\TestCases\Frames.robot">
 <test id="s1-t1" name="Handling_Frames" line="13">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221229 18:26:36.963" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html'.</msg>
-<status status="PASS" starttime="20221229 18:26:36.963" endtime="20221229 18:26:43.879"/>
+<msg timestamp="20230225 17:56:27.643" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html'.</msg>
+<status status="PASS" starttime="20230225 17:56:27.642" endtime="20230225 17:56:33.191"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>1seconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221229 18:26:43.887" endtime="20221229 18:26:43.887"/>
+<status status="PASS" starttime="20230225 17:56:33.193" endtime="20230225 17:56:33.193"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221229 18:26:43.887" endtime="20221229 18:26:45.065"/>
+<status status="PASS" starttime="20230225 17:56:33.194" endtime="20230225 17:56:34.365"/>
 </kw>
 <kw name="Frames" library="FrameOps">
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>packageListFrame</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 18:26:45.070" level="INFO">Selecting frame 'packageListFrame'.</msg>
-<status status="PASS" starttime="20221229 18:26:45.070" endtime="20221229 18:26:47.182"/>
+<msg timestamp="20230225 17:56:34.372" level="INFO">Selecting frame 'packageListFrame'.</msg>
+<status status="PASS" starttime="20230225 17:56:34.371" endtime="20230225 17:56:36.480"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>org.openqa.selenium</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:26:47.182" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
-<status status="PASS" starttime="20221229 18:26:47.182" endtime="20221229 18:26:50.347"/>
+<msg timestamp="20230225 17:56:36.480" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
+<status status="PASS" starttime="20230225 17:56:36.480" endtime="20230225 17:56:39.573"/>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20221229 18:26:50.347" endtime="20221229 18:26:51.360"/>
+<status status="PASS" starttime="20230225 17:56:39.573" endtime="20230225 17:56:40.583"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>packageFrame</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 18:26:51.360" level="INFO">Selecting frame 'packageFrame'.</msg>
-<status status="PASS" starttime="20221229 18:26:51.360" endtime="20221229 18:26:53.399"/>
+<msg timestamp="20230225 17:56:40.583" level="INFO">Selecting frame 'packageFrame'.</msg>
+<status status="PASS" starttime="20230225 17:56:40.583" endtime="20230225 17:56:42.615"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Alert</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:26:53.399" level="INFO">Clicking link 'Alert'.</msg>
-<status status="PASS" starttime="20221229 18:26:53.399" endtime="20221229 18:26:56.602"/>
+<msg timestamp="20230225 17:56:42.615" level="INFO">Clicking link 'Alert'.</msg>
+<status status="PASS" starttime="20230225 17:56:42.615" endtime="20230225 17:56:45.722"/>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20221229 18:26:56.602" endtime="20221229 18:26:57.609"/>
+<status status="PASS" starttime="20230225 17:56:45.722" endtime="20230225 17:56:46.732"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>classFrame</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 18:26:57.609" level="INFO">Selecting frame 'classFrame'.</msg>
-<status status="PASS" starttime="20221229 18:26:57.609" endtime="20221229 18:26:59.706"/>
+<msg timestamp="20230225 17:56:46.732" level="INFO">Selecting frame 'classFrame'.</msg>
+<status status="PASS" starttime="20230225 17:56:46.732" endtime="20230225 17:56:48.849"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Tree</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:26:59.706" level="INFO">Clicking link 'Tree'.</msg>
-<status status="PASS" starttime="20221229 18:26:59.706" endtime="20221229 18:27:03.441"/>
+<msg timestamp="20230225 17:56:48.849" level="INFO">Clicking link 'Tree'.</msg>
+<status status="PASS" starttime="20230225 17:56:48.849" endtime="20230225 17:56:52.512"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>By.ByClassName</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:27:03.441" level="INFO">Clicking link 'By.ByClassName'.</msg>
-<status status="PASS" starttime="20221229 18:27:03.441" endtime="20221229 18:27:07.259"/>
+<msg timestamp="20230225 17:56:52.512" level="INFO">Clicking link 'By.ByClassName'.</msg>
+<status status="PASS" starttime="20230225 17:56:52.512" endtime="20230225 17:56:56.132"/>
 </kw>
-<status status="PASS" starttime="20221229 18:26:45.065" endtime="20221229 18:27:07.259"/>
+<status status="PASS" starttime="20230225 17:56:34.365" endtime="20230225 17:56:56.132"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221229 18:27:07.259" endtime="20221229 18:27:12.418"/>
+<status status="PASS" starttime="20230225 17:56:56.132" endtime="20230225 17:56:59.293"/>
 </kw>
-<status status="PASS" starttime="20221229 18:26:36.963" endtime="20221229 18:27:12.418"/>
+<status status="PASS" starttime="20230225 17:56:27.641" endtime="20230225 17:56:59.293"/>
 </test>
 <test id="s1-t2" name="Handling_Frames2" line="19">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221229 18:27:12.431" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html'.</msg>
-<status status="PASS" starttime="20221229 18:27:12.423" endtime="20221229 18:27:22.506"/>
+<msg timestamp="20230225 17:56:59.302" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html'.</msg>
+<status status="PASS" starttime="20230225 17:56:59.300" endtime="20230225 17:57:04.885"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>1seconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221229 18:27:22.506" endtime="20221229 18:27:22.506"/>
+<status status="PASS" starttime="20230225 17:57:04.885" endtime="20230225 17:57:04.885"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221229 18:27:22.511" endtime="20221229 18:27:23.700"/>
+<status status="PASS" starttime="20230225 17:57:04.892" endtime="20230225 17:57:06.088"/>
 </kw>
 <kw name="Frames" library="FrameOps">
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>packageListFrame</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 18:27:23.705" level="INFO">Selecting frame 'packageListFrame'.</msg>
-<status status="PASS" starttime="20221229 18:27:23.705" endtime="20221229 18:27:25.878"/>
+<msg timestamp="20230225 17:57:06.093" level="INFO">Selecting frame 'packageListFrame'.</msg>
+<status status="PASS" starttime="20230225 17:57:06.088" endtime="20230225 17:57:08.178"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>org.openqa.selenium</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:27:25.878" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
-<status status="PASS" starttime="20221229 18:27:25.878" endtime="20221229 18:27:28.962"/>
+<msg timestamp="20230225 17:57:08.178" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
+<status status="PASS" starttime="20230225 17:57:08.178" endtime="20230225 17:57:11.254"/>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20221229 18:27:28.962" endtime="20221229 18:27:29.975"/>
+<status status="PASS" starttime="20230225 17:57:11.254" endtime="20230225 17:57:12.264"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>packageFrame</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 18:27:29.975" level="INFO">Selecting frame 'packageFrame'.</msg>
-<status status="PASS" starttime="20221229 18:27:29.975" endtime="20221229 18:27:32.024"/>
+<msg timestamp="20230225 17:57:12.264" level="INFO">Selecting frame 'packageFrame'.</msg>
+<status status="PASS" starttime="20230225 17:57:12.264" endtime="20230225 17:57:14.334"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Alert</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:27:32.024" level="INFO">Clicking link 'Alert'.</msg>
-<status status="PASS" starttime="20221229 18:27:32.024" endtime="20221229 18:27:35.221"/>
+<msg timestamp="20230225 17:57:14.334" level="INFO">Clicking link 'Alert'.</msg>
+<status status="PASS" starttime="20230225 17:57:14.334" endtime="20230225 17:57:17.532"/>
 </kw>
 <kw name="Unselect Frame" library="SeleniumLibrary">
 <doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20221229 18:27:35.221" endtime="20221229 18:27:36.238"/>
+<status status="PASS" starttime="20230225 17:57:17.532" endtime="20230225 17:57:18.545"/>
 </kw>
 <kw name="Select Frame" library="SeleniumLibrary">
 <arg>classFrame</arg>
 <doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20221229 18:27:36.238" level="INFO">Selecting frame 'classFrame'.</msg>
-<status status="PASS" starttime="20221229 18:27:36.238" endtime="20221229 18:27:38.354"/>
+<msg timestamp="20230225 17:57:18.545" level="INFO">Selecting frame 'classFrame'.</msg>
+<status status="PASS" starttime="20230225 17:57:18.545" endtime="20230225 17:57:20.618"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>Tree</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:27:38.354" level="INFO">Clicking link 'Tree'.</msg>
-<status status="PASS" starttime="20221229 18:27:38.354" endtime="20221229 18:27:42.096"/>
+<msg timestamp="20230225 17:57:20.618" level="INFO">Clicking link 'Tree'.</msg>
+<status status="PASS" starttime="20230225 17:57:20.618" endtime="20230225 17:57:24.403"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>By.ByClassName</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221229 18:27:42.096" level="INFO">Clicking link 'By.ByClassName'.</msg>
-<status status="PASS" starttime="20221229 18:27:42.096" endtime="20221229 18:27:45.650"/>
+<msg timestamp="20230225 17:57:24.403" level="INFO">Clicking link 'By.ByClassName'.</msg>
+<status status="PASS" starttime="20230225 17:57:24.403" endtime="20230225 17:57:28.076"/>
 </kw>
-<status status="PASS" starttime="20221229 18:27:23.700" endtime="20221229 18:27:45.650"/>
+<status status="PASS" starttime="20230225 17:57:06.088" endtime="20230225 17:57:28.076"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221229 18:27:45.650" endtime="20221229 18:27:48.901"/>
+<status status="PASS" starttime="20230225 17:57:28.076" endtime="20230225 17:57:31.245"/>
 </kw>
-<status status="PASS" starttime="20221229 18:27:12.423" endtime="20221229 18:27:48.904"/>
+<status status="PASS" starttime="20230225 17:56:59.298" endtime="20230225 17:57:31.245"/>
 </test>
-<status status="PASS" starttime="20221229 18:26:36.651" endtime="20221229 18:27:48.907"/>
+<status status="PASS" starttime="20230225 17:56:27.312" endtime="20230225 17:57:31.260"/>
 </suite>
 <statistics>
 <total>

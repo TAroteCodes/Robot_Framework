@@ -10,6 +10,7 @@ Login_Test
     Open Browser    ${url}    ${browser}
     Maximize Browser Window
     Login_to_OHRM
+    Logout_from_OHRM
     Close Browser
 *** Keywords ***
 
@@ -28,6 +29,7 @@ Login_to_OHRM
     Click Button    xpath://body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[3]/button[1]
     Sleep    3
     Title Should Be    OrangeHRM
+Logout_from_OHRM
     Click Element    xpath://header/div[1]/div[2]/ul[1]/li[1]/span[1]/i[1]
     Sleep    2
     Click Element    xpath://a[contains(text(),'Logout')]

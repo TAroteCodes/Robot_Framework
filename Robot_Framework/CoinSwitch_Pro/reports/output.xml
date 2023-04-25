@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20230417 19:50:23.315" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCase" source="C:\Users\lenovo\Desktop\CoinSwitch_Pro\TestCase\TestCase.robot">
+<test id="s1-t1" name="Verify The Response API With Get Method" line="4">
+<kw name="Given Send API Request &amp; Log Bid Value" library="Keyword">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>coinswitch</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230417 19:50:24.688" level="INFO">Creating Session using : alias=coinswitch, url=https://coinswitch.co/pro, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230417 19:50:24.688" endtime="20230417 19:50:24.688"/>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>coinswitch</arg>
+<arg>/api/v1/realtime-rates/depth?symbol=btc,inr&amp;exchange=csx</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<msg timestamp="20230417 19:50:24.688" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230417 19:50:24.790" level="INFO">GET Request : url=https://coinswitch.co/pro/api/v1/realtime-rates/depth?symbol=btc,inr&amp;exchange=csx 
+ path_url=/pro/api/v1/realtime-rates/depth?symbol=btc,inr&amp;exchange=csx 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20230417 19:50:24.790" level="INFO">GET Response : url=https://coinswitch.co/pro/api/v1/realtime-rates/depth?symbol=btc,inr&amp;exchange=csx 
+ status=200, reason=OK 
+ headers={'Date': 'Mon, 17 Apr 2023 14:20:24 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'content-security-policy': "default-src 'self' *.coinswitch.co *.s3.ap-southeast-1.amazonaws.com in1.clevertap-prod.com https://api.amplitude.com https://in.hotjar.com https://analytics.twitter.com https://stats.g.doubleclick.net https://*.clarity.ms https://api.smooch.io 'unsafe-inline';script-src 'self' *.coinswitch.co *.s3.ap-southeast-1.amazonaws.com https://js-agent.newrelic.com *.nr-data.net https://static.hotjar.com https://script.hotjar.com https://www.google-analytics.com https://ssl.google-analytics.com https://*.googletagmanager.com https://tagmanager.google.com static.clevertap.com in1.clevertap-prod.com https://d2r1yp2w7bby2u.cloudfront.net/js/clevertap.min.js https://static.cloudflareinsights.com https://*.zdassets.com https://*.zendesk.com https://static.ads-twitter.com https://bat.bing.com https://*.clarity.ms https://api.smooch.io 'unsafe-inline';connect-src 'self' https://*.coinswitch.co wss://*.coinswitch.co *.nr-data.net https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com https://api.amplitude.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://stats.g.doubleclick.net ws://localhost:8002 https://*.zdassets.com https://*.zendesk.com wss://api.smooch.io https://*.clarity.ms;img-src 'self' blob: data: *.coinswitch.co *.s3.ap-southeast-1.amazonaws.com https://static.hotjar.com https://script.hotjar.com https://*.google-analytics.com https://stats.g.doubleclick.net *.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com https://t.co https://*.zdassets.com https://*.zendesk.com https://analytics.twitter.com/1/i/adsct https://bat.bing.com/action/0 https://*.clarity.ms;style-src 'self' *.coinswitch.co *.s3.ap-southeast-1.amazonaws.com https://static.hotjar.com https://script.hotjar.com https://tagmanager.google.com https://fonts.googleapis.com 'unsafe-inline';font-src 'self' *.coinswitch.co *.s3.ap-southeast-1.amazonaws.com https://script.hotjar.com https://fonts.gstatic.com data:;frame-src 'self' *.coinswitch.co https://vars.hotjar.com;frame-ancestors 'self' *.coinswitch.co;object-src 'none';base-uri 'none'", 'strict-transport-security': 'max-age=31536000; includeSubDomains', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'Cache-Control': 'private, no-cache, no-store, max-age=0', 'etag': 'W/"1161-BiHyJkSUNPNenYT7O0z48QjHbac"', 'vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=OB%2FU8OyCCJrIQAbMxhBe%2Fdru46XkIO32kQjsuO6F4Q9lgD4wSpLt184lwb5MWoikLaQqynr%2FE0YlFRnt6G3DuTAJrYV9C%2FxgdooDdMPqMbv%2FpfnMJE9Kn544jqPg4ec%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '7b954efd1e6f6ec2-BOM'} 
+ body={"success":true,"data":{"s":"BTC,INR","timestamp":1681741224168,"bids":[["2560000","0.00088"],["2552413","0.00009"],["2550000","0.00465"],["2549000","0.00039"],["2548822","0.00005"],["2548275","0.00973"],["2548000","0.00021"],["2547951","0.0004"],["2547902","0.00008"],["2547804","0.0003"],["2547758","0.00039"],["2547733","0.00004"],["2547314","0.00039"],["2547020","0.00956"],["2547019","0.00008"],["2546956","0.0002"],["2546922","0.00448"],["2546921","0.00039"],["2546040","0.00097"],["2546024","0.00033"],["2545000","0.00063"],["2544066","0.0011"],["2543832","0.00004"],["2543319","0.00004"],["2543283","0.00098"],["2543100","0.00215"],["2543002","0.00016"],["2542855","0.00393"],["2541857","0.00976"],["2541694","0.00014"],["2541312","0.00062"],["2541209","0.0002"],["2540863","0.00004"],["2540346","0.00005"],["2540000","0.00099"],["2539294","0.00004"],["2539219","0.00005"],["2538375","0.00977"],["2538013","0.00043"],["2538012","0.00288"],["2538000","0.00394"],["2537163","0.00511"],["2536369","0.00197"],["2536068","0.0002"],["2535435","0.00021"],["2530000","0.01782"],["2529850","0.00005"],["2529040","0.00981"],["2528000","0.00396"],["2527950","0.00012"],["2527949","0.00019"],["2526631","0.0002"],["2526302","0.00982"],["2525689","0.00025"],["2525000","0.00013"],["2524157","0.00011"],["2523625","0.00198"],["2523624","0.00198"],["2522964","0.00008"],["2522413","0.00594"],["2522072","0.00024"],["2521417","0.00984"],["2521300","0.00004"],["2521028","0.00983"],["2520350","0.00099"],["2520000","0.00138"],["2519305","0.00028"],["2519223","0.00053"],["2518310","0.0001"],["2517497","0.0004"],["2516550","0.01272"],["2516381","0.00199"],["2516200","0.03214"],["2515827","0.0004"],["2515765","0.00199"],["2515415","0.0004"],["2515125","0.00008"],["2515034","0.00156"],["2515000","0.00174"],["2514649","0.0004"],["2514415","0.00068"],["2513985","0.00199"],["2513913","0.00155"],["2513608","0.0034"],["2513269","0.00008"],["2513225","0.0002"],["2512200","0.0004"],["2511130","0.00199"],["2510973","0.00986"],["2510915","0.0004"],["2510850","0.0004"],["2510689","0.00004"],["2510602","0.00004"],["2510000","0.00012"],["2509943","0.0004"],["2509900","0.00111"],["2509620","0.00008"],["2509360","0.00278"],["2509210","0.00004"],["2509000","0.0002"]],"asks":[["2576000","0.0107"],["2576400","0.0326"],["2581563","0.005"],["2588063","0.00971"],["2594480","0.00969"],["2599950","0.00675"],["2600000","0.00004"],["2600306","0.00966"],["2600545","0.00039"],["2600898","0.00966"],["2613545","0.00004"],["2613733","0.02883"],["2615998","0.00413"],["2620000","0.53261"],["2625075","0.00004"],["2630000","0.01389"],["2630274","0.00006"],["2631000","0.00306"],["2631600","0.001"],["2632040","0.00006"],["2632985","0.01908"],["2637000","0.00035"],["2637040","0.00028"],["2637142","0.00044"],["2637674","0.001"],["2640000","0.00031"],["2640577","0.00004"],["2640836","0.00014"],["2643942","0.00005"],["2644044","0.00869"],["2647002","0.00013"],["2648692","0.02793"],["2649000","0.00765"],["2650000","0.09496"],["2650600","0.00422"],["2652939","0.00004"],["2653523","0.0006"],["2654000","0.0012"],["2654177","0.00287"],["2655000","0.00042"],["2655002","0.00115"],["2655060","0.00036"],["2656742","0.00047"],["2657040","0.00004"],["2657173","0.00019"],["2658120","0.00004"],["2660000","0.00095"],["2660322","0.00005"],["2661690","0.0106"],["2662264","0.00229"],["2662302","0.00025"],["2662939","0.00059"],["2662972","0.00017"],["2663859","0.00004"],["2663966","0.00037"],["2664586","0.00012"],["2665000","0.00075"],["2665500","0.00364"],["2666000","0.05454"],["2666077","0.00013"],["2666814","0.00015"],["2667300","0.00013"],["2667598","0.00126"],["2667810","0.00046"],["2668050","0.00526"],["2668921","0.00004"],["2670000","0.00597"],["2670360","0.00004"],["2670598","0.00187"],["2670794","0.0001"],["2670972","0.00015"],["2671494","0.00429"],["2671850","0.00004"],["2672400","0.00175"],["2672502","0.00862"],["2672714","0.00013"],["2672910","0.0202"],["2673008","0.00873"],["2673012","0.00065"],["2673096","0.00011"],["2673932","0.00004"],["2674643","0.00009"],["2675000","0.00096"],["2675100","0.00073"],["2676198","0.00043"],["2676760","0.00017"],["2676874","0.00116"],["2677500","0.00092"],["2677526","0.00089"],["2677699","0.00277"],["2677800","0.00403"],["2678333","0.0008"],["2678481","0.00008"],["2679000","0.00016"],["2680000","0.0166"],["2680611","0.00004"],["2682092","0.00011"],["2682174","0.00024"],["2683203","0.02552"],["2683662","0.00038"]]}} 
+ </msg>
+<msg timestamp="20230417 19:50:24.790" level="INFO">C:\Users\lenovo\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'coinswitch.co'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20230417 19:50:24.795" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230417 19:50:24.688" endtime="20230417 19:50:24.795"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230417 19:50:24.795" endtime="20230417 19:50:24.795"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230417 19:50:24.795" endtime="20230417 19:50:24.811"/>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<var>${json_response}</var>
+<arg>${response.content}</arg>
+<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
+<msg timestamp="20230417 19:50:24.811" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20230417 19:50:24.819" level="INFO">To JSON using : content={"success":true,"data":{"s":"BTC,INR","timestamp":1681741224168,"bids":[["2560000","0.00088"],["2552413","0.00009"],["2550000","0.00465"],["2549000","0.00039"],["2548822","0.00005"],["2548275","0.00973"],["2548000","0.00021"],["2547951","0.0004"],["2547902","0.00008"],["2547804","0.0003"],["2547758","0.00039"],["2547733","0.00004"],["2547314","0.00039"],["2547020","0.00956"],["2547019","0.00008"],["2546956","0.0002"],["2546922","0.00448"],["2546921","0.00039"],["2546040","0.00097"],["2546024","0.00033"],["2545000","0.00063"],["2544066","0.0011"],["2543832","0.00004"],["2543319","0.00004"],["2543283","0.00098"],["2543100","0.00215"],["2543002","0.00016"],["2542855","0.00393"],["2541857","0.00976"],["2541694","0.00014"],["2541312","0.00062"],["2541209","0.0002"],["2540863","0.00004"],["2540346","0.00005"],["2540000","0.00099"],["2539294","0.00004"],["2539219","0.00005"],["2538375","0.00977"],["2538013","0.00043"],["2538012","0.00288"],["2538000","0.00394"],["2537163","0.00511"],["2536369","0.00197"],["2536068","0.0002"],["2535435","0.00021"],["2530000","0.01782"],["2529850","0.00005"],["2529040","0.00981"],["2528000","0.00396"],["2527950","0.00012"],["2527949","0.00019"],["2526631","0.0002"],["2526302","0.00982"],["2525689","0.00025"],["2525000","0.00013"],["2524157","0.00011"],["2523625","0.00198"],["2523624","0.00198"],["2522964","0.00008"],["2522413","0.00594"],["2522072","0.00024"],["2521417","0.00984"],["2521300","0.00004"],["2521028","0.00983"],["2520350","0.00099"],["2520000","0.00138"],["2519305","0.00028"],["2519223","0.00053"],["2518310","0.0001"],["2517497","0.0004"],["2516550","0.01272"],["2516381","0.00199"],["2516200","0.03214"],["2515827","0.0004"],["2515765","0.00199"],["2515415","0.0004"],["2515125","0.00008"],["2515034","0.00156"],["2515000","0.00174"],["2514649","0.0004"],["2514415","0.00068"],["2513985","0.00199"],["2513913","0.00155"],["2513608","0.0034"],["2513269","0.00008"],["2513225","0.0002"],["2512200","0.0004"],["2511130","0.00199"],["2510973","0.00986"],["2510915","0.0004"],["2510850","0.0004"],["2510689","0.00004"],["2510602","0.00004"],["2510000","0.00012"],["2509943","0.0004"],["2509900","0.00111"],["2509620","0.00008"],["2509360","0.00278"],["2509210","0.00004"],["2509000","0.0002"]],"asks":[["2576000","0.0107"],["2576400","0.0326"],["2581563","0.005"],["2588063","0.00971"],["2594480","0.00969"],["2599950","0.00675"],["2600000","0.00004"],["2600306","0.00966"],["2600545","0.00039"],["2600898","0.00966"],["2613545","0.00004"],["2613733","0.02883"],["2615998","0.00413"],["2620000","0.53261"],["2625075","0.00004"],["2630000","0.01389"],["2630274","0.00006"],["2631000","0.00306"],["2631600","0.001"],["2632040","0.00006"],["2632985","0.01908"],["2637000","0.00035"],["2637040","0.00028"],["2637142","0.00044"],["2637674","0.001"],["2640000","0.00031"],["2640577","0.00004"],["2640836","0.00014"],["2643942","0.00005"],["2644044","0.00869"],["2647002","0.00013"],["2648692","0.02793"],["2649000","0.00765"],["2650000","0.09496"],["2650600","0.00422"],["2652939","0.00004"],["2653523","0.0006"],["2654000","0.0012"],["2654177","0.00287"],["2655000","0.00042"],["2655002","0.00115"],["2655060","0.00036"],["2656742","0.00047"],["2657040","0.00004"],["2657173","0.00019"],["2658120","0.00004"],["2660000","0.00095"],["2660322","0.00005"],["2661690","0.0106"],["2662264","0.00229"],["2662302","0.00025"],["2662939","0.00059"],["2662972","0.00017"],["2663859","0.00004"],["2663966","0.00037"],["2664586","0.00012"],["2665000","0.00075"],["2665500","0.00364"],["2666000","0.05454"],["2666077","0.00013"],["2666814","0.00015"],["2667300","0.00013"],["2667598","0.00126"],["2667810","0.00046"],["2668050","0.00526"],["2668921","0.00004"],["2670000","0.00597"],["2670360","0.00004"],["2670598","0.00187"],["2670794","0.0001"],["2670972","0.00015"],["2671494","0.00429"],["2671850","0.00004"],["2672400","0.00175"],["2672502","0.00862"],["2672714","0.00013"],["2672910","0.0202"],["2673008","0.00873"],["2673012","0.00065"],["2673096","0.00011"],["2673932","0.00004"],["2674643","0.00009"],["2675000","0.00096"],["2675100","0.00073"],["2676198","0.00043"],["2676760","0.00017"],["2676874","0.00116"],["2677500","0.00092"],["2677526","0.00089"],["2677699","0.00277"],["2677800","0.00403"],["2678333","0.0008"],["2678481","0.00008"],["2679000","0.00016"],["2680000","0.0166"],["2680611","0.00004"],["2682092","0.00011"],["2682174","0.00024"],["2683203","0.02552"],["2683662","0.00038"]]}} </msg>
+<msg timestamp="20230417 19:50:24.819" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20230417 19:50:24.819" level="INFO">${json_response} = {'success': True, 'data': {'s': 'BTC,INR', 'timestamp': 1681741224168, 'bids': [['2560000', '0.00088'], ['2552413', '0.00009'], ['2550000', '0.00465'], ['2549000', '0.00039'], ['2548822', '0.00005'], ...</msg>
+<status status="PASS" starttime="20230417 19:50:24.811" endtime="20230417 19:50:24.819"/>
+</kw>
+<kw name="Get value from JSON" library="RPA.JSON">
+<var>${Bid_Value}</var>
+<arg>${json_response}</arg>
+<arg>data.bids[0][0]</arg>
+<doc>Get a single value from a JSON serializable object that matches the given expression.</doc>
+<msg timestamp="20230417 19:50:24.819" level="INFO">Get value from JSON with expression: 'data.bids[0][0]'</msg>
+<msg timestamp="20230417 19:50:24.899" level="INFO">${Bid_Value} = 2560000</msg>
+<status status="PASS" starttime="20230417 19:50:24.819" endtime="20230417 19:50:24.899"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${Bid_Value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230417 19:50:24.899" endtime="20230417 19:50:24.907"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Bid_Value}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20230417 19:50:24.907" level="INFO">${Bid_Value} = 2560000</msg>
+<status status="PASS" starttime="20230417 19:50:24.907" endtime="20230417 19:50:24.907"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:24.688" endtime="20230417 19:50:24.907"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:24.688" endtime="20230417 19:50:24.907"/>
+</test>
+<test id="s1-t2" name="Verifying Limit Price Is Same As That Of Bid Price" line="6">
+<kw name="Open Browser And Navigate To URL" library="Keyword" type="SETUP">
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<arg>${base_url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230417 19:50:24.915" level="INFO">Opening browser 'Chrome' to base url 'https://coinswitch.co/pro'.</msg>
+<status status="PASS" starttime="20230417 19:50:24.915" endtime="20230417 19:50:29.487"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230417 19:50:29.487" endtime="20230417 19:50:29.632"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:24.907" endtime="20230417 19:50:29.632"/>
+</kw>
+<kw name="Given Navigate to Trading Page" library="Keyword">
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${Tread_Now_Button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230417 19:50:29.639" endtime="20230417 19:50:29.706"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${Tread_Now_Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230417 19:50:29.706" level="INFO">Clicking button 'xpath://button[contains(text(),'TRADE NOW')]'.</msg>
+<status status="PASS" starttime="20230417 19:50:29.706" endtime="20230417 19:50:30.229"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:29.632" endtime="20230417 19:50:30.229"/>
+</kw>
+<kw name="When Click On Latest Buy Price" library="Keyword">
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${Skip_All_Button}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20230417 19:50:32.255" level="INFO">Clicking element 'xpath://div[contains(text(),'Skip All')]'.</msg>
+<status status="PASS" starttime="20230417 19:50:30.237" endtime="20230417 19:50:32.735"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${Done_Button}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20230417 19:50:32.926" level="INFO">Clicking element 'xpath://div[contains(text(),'Done')]'.</msg>
+<status status="PASS" starttime="20230417 19:50:32.735" endtime="20230417 19:50:33.110"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${Latest_Buy_Price}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20230417 19:50:33.558" level="INFO">Clicking element 'xpath://*[@class="tw-flex-1 tw-text-right tw-text-green-01 lg:tw-text-center"][1]'.</msg>
+<status status="PASS" starttime="20230417 19:50:33.110" endtime="20230417 19:50:33.702"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:30.237" endtime="20230417 19:50:33.702"/>
+</kw>
+<kw name="Then Get Limit Price Of Order And Compaire With Bid Price" library="Keyword">
+<kw name="Scroll Element Into View" library="RPA.Browser.Selenium">
+<arg>${Limit_Price}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230417 19:50:33.710" endtime="20230417 19:50:34.091"/>
+</kw>
+<kw name="Get Value" library="RPA.Browser.Selenium">
+<var>${Limit_Price_Value}</var>
+<arg>${Limit_Price_Val}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20230417 19:50:34.579" level="INFO">${Limit_Price_Value} = 2560000</msg>
+<status status="PASS" starttime="20230417 19:50:34.091" endtime="20230417 19:50:34.579"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${Limit_Price_Value}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230417 19:50:34.579" endtime="20230417 19:50:34.603"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Bid_Value}</arg>
+<arg>${Limit_Price_Value}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230417 19:50:34.603" endtime="20230417 19:50:34.603"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:33.702" endtime="20230417 19:50:34.603"/>
+</kw>
+<kw name="Close Browser" library="RPA.Browser.Selenium" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230417 19:50:34.611" endtime="20230417 19:50:36.923"/>
+</kw>
+<status status="PASS" starttime="20230417 19:50:24.907" endtime="20230417 19:50:36.923"/>
+</test>
+<status status="PASS" starttime="20230417 19:50:23.331" endtime="20230417 19:50:36.928"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TestCase">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230417 19:50:24.688" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg timestamp="20230417 19:50:24.811" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+</errors>
+</robot>
